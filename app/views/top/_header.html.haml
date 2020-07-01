@@ -1,1 +1,15 @@
-header
+.header
+  .header__main
+    %h1.header__main--title Artgram
+  .header__list
+    %ul.header___list__top-ul
+      %li.header__list__top-ul__li
+        = link_to "カテゴリー", "#", class: "category"
+      %li.header__list__top-ul__li
+        = link_to "ログアウト", "#", class: "auto"
+      %li.header__list__top-ul__li
+        = link_to "マイページ", "#", class: "mypage"
+      %li.header__list__top-ul__li
+        = link_to "新規登録", "#", class: "new-art"
+      %li.header__list__top-ul__li
+        = link_to "ログイン", "#", class: "in"

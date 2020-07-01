@@ -1,0 +1,58 @@
+.header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  &__main {
+    &--title {
+      font-family: 'Apple Chancery', monospace;
+      font-size: 100px;
+      padding: 20px;
+      margin-right: 30px;
+    }
+  }
+  &__list {
+    margin-top: 100px;
+    .header___list__top-ul {
+      display: flex;
+      .header__list__top-ul__li {
+        margin: 10px;
+        .auto {
+          font-family: 'Apple Chancery', monospace;
+          text-decoration: none;
+          font-size: 13px;
+          color: black;
+          font-family: 'Apple Chancery','ヒラギノ明朝 ProN','Hiragino Mincho ProN',monospace;
+        }
+        .mypage {
+          font-family: 'Apple Chancery', monospace;
+          text-decoration: none;
+          font-size: 13px;
+          color: black;
+          font-family: 'Apple Chancery','ヒラギノ明朝 ProN','Hiragino Mincho ProN',monospace;
+        }
+        .new-art {
+          font-family: 'Apple Chancery', monospace;
+          text-decoration: none;
+          font-size: 13px;
+          color: black;
+          font-family: 'Apple Chancery','ヒラギノ明朝 ProN','Hiragino Mincho ProN',monospace;
+        }
+        .in {
+          font-family: 'Apple Chancery', monospace;
+          text-decoration: none;
+          font-size: 13px;
+          color: black;
+          font-family: 'Apple Chancery','ヒラギノ明朝 ProN','Hiragino Mincho ProN',monospace;
+        }
+        .category {
+          font-family: 'Apple Chancery', monospace;
+          text-decoration: none;
+          font-size: 13px;
+          color: black;
+          font-family: 'Apple Chancery','ヒラギノ明朝 ProN','Hiragino Mincho ProN',monospace;
+        }
+      }
+    }
+  }
+}

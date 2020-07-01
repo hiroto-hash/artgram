@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(34, 34, 34);
+  &__inner {
+      a{
+        text-decoration: none;
+      .footer-item {
+        color: white;
+        font-family: 'Apple Chancery', monospace;
+        text-align: center;
+        line-height: 5;
+        font-size: 40px;
+      }
+    }
+  }
+}
