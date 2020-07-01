@@ -1,0 +1,54 @@
+.main {
+  &__inner {
+    &__top {
+      &__block {
+        &__list {
+          .list-title {
+            text-align: center;
+            color: black;
+            font-weight: bolder;
+            margin-top: 100px;
+            font-size: 30px;
+          }
+          .inner-items {
+            &__ul {
+              display: flex;
+              justify-content: space-around;
+              margin-top: 30px;
+              &__li {
+                .items-data {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__bottom {
+      width: 100%;
+      height: 500px;
+      margin-top: 100px;
+      background-image: url(https://pakutaso.cdn.rabify.me/shared/img/thumb/kazukihiroA65DSCF3580.jpg.webp?d=500);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      &__text {
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+        margin-left: 39%;
+        margin-top: 7%;
+        .apple-image {
+          margin-top: 30px;
+          height: 50px;
+        }
+        .google-image {
+          margin-top: 30px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
