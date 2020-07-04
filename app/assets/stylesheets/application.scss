@@ -2,7 +2,10 @@
   box-sizing: border-box;
 }
 @import "reset";
+@import "config/colors";
 @import "top/header";
 @import "top/main";
 @import "top/footer";
 @import "top/sellicon";
+@import "modules/user";
+@import "modules/flash";
