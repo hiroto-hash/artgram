@@ -3,6 +3,10 @@
     .main__inner__top
       .main__inner__top__block
         .main__inner__top__block__list
+          %p.welcome
+            Welocome to
+            %span.user-name
+              = current_user.name
           %h2.list-title
             イラストレーション
           .inner-items
