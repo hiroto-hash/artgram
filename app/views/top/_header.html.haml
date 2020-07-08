@@ -1,17 +1,44 @@
-.header
-  .header__main
-    %h1.header__main--title Artgram
-  .header__list
-    %ul.header___list__top-ul
-      - if user_signed_in?
-        %li.header__list__top-ul__li
-          = link_to "カテゴリー", "#", class: "category"
-        %li.header__list__top-ul__li
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "auto"
-        %li.header__list__top-ul__li
-          = link_to "マイページ", "#", class: "mypage"
-      - else
-        %li.header__list__top-ul__li
-          = link_to "新規登録", "#", class: "new-art"
-        %li.header__list__top-ul__li
-          = link_to "ログイン", "#", class: "in"
+.header 
+  .header__contents
+    .header__contents--main
+      .header__contents--main-icon
+        =link_to "#", class: "main-icon" do
+          Artgram
+      .searchbox
+        %form{"accept-charset" => "UTF-8", :action => "#", :method => "get", :class => "form"}
+          %input{:name => "utf8", :type => "hidden", :value => "✓",}/
+          %input.search-input{:name => "key",:placeholder => "キーワードから探す" }/
+          %button{:type => "submit", :class => "botton"}
+            .header__contents--main-search-item
+              =image_tag "http://furima.tokyo/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg"
+    .header__contents--menu
+      .categorybox
+        %ul.right-items
+          %li.right-category
+            = link_to 'カテゴリー',"#", class: "catbtn"
+            .category-items
+              %ul.category1
+                - @parents.each do |parent|
+                  %li.parent__list
+                    = link_to "#{parent.name}","#", class: "parent_category",id: "#{parent.id}"
+                    %ul.category2
+                      - parent.children.each do |child|
+                        %li.child__list
+                          = link_to "#{child.name}","#", class: "child_category",id: "#{child.id}"
+                          %ul.category3
+                            - child.children.each do |child|
+                              %li.grandchild__list
+                                = link_to "#{child.name}","#", class: "grandchild_category",id: "#{child.id}"
+      .right-items__brands
+        = link_to "ブランド", "#", class: "brand-jump"
+      %ul.left-items
+        - if user_signed_in?
+          %li.left-items__newgit
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+          %li.left-items__mypege
+            = link_to "マイページ", "#"
+        - else
+          %li.left-items__rogin
+            = link_to "ログイン", new_user_session_path
+          %li.left-items__new
+            = link_to "新規登録", new_user_registration_path
