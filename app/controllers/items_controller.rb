@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_category
   def index
     
   end
@@ -20,4 +21,9 @@ class ItemsController < ApplicationController
 
   def update
   end
+
+  # def private
+  #   params.require(:user)
+  # end
+
 end

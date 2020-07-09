@@ -1,2 +1,22 @@
 .warrper
-  
+  = render "top/header"
+  .new-inner
+    .new-title
+      .new-title__inner
+        %input.form-control{name: "draft_item[title]", placeholder: "タイトル", tabindex: "1", value: ""}/
+    .new-tag
+      .new-tag__inner
+        %input.form-control{name: "draft_item[tag]", placeholder: "タグ", tabindex: "1", value: ""}/
+    .new-text
+      .new-text__inner
+      .new-text__inner__top 
+        .new-text__inner__top
+          %i.fa.fa-picture-o
+      .new-text__inner__bottom
+        %textarea.main_textarea{name: "draft_item[raw_body]", placeholder: "アート知識をMarkdown記法で書いて共有しよう", tabindex: "3"}
+
+    .new-push
+      .new-push__inner
+        %button.push-button{tabindex: "12", type: "button"}
+          %span.push-icon
+            投稿
