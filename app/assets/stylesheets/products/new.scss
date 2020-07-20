@@ -1,35 +1,48 @@
-.new-inner {
+.news-inner {
   margin-top: 30px;
-  .new-title {
+  .news-title {
     &__inner {
       width: 100%;
       .form-control {
         width: 90%;
         padding: 10px;
+        border: 1px solid #ddd;
       }
     }
   }
-  .new-tag {
+  .news-tag {
     margin-top: 20px;
     &__inner {
       .form-control {
         width: 90%;
         padding: 10px;
+        border: 1px solid #ddd;
       }
     }
   }
-  .new-text {
+  .news-text {
+    display: flex;
     &__inner {
-      .main-textarea {
-        width: 100%;
+      &__top {
+        width: 90%;
+        background-color: honeydew;
+        
+      }
+    }
+    .text-input {
+      width:50%;
+      height:300px;
+      border: 1px solid #ddd;
+      textarea {
+        resize: vertical;
       }
     }
   }
-  .new-push {
+  .news-push {
     &__inner {
       .push-button {
         .push-icon {
-          color: red($color: #000000);
+          color: red($color: #000000)
         }
       }
     }
