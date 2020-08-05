@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: artgram_production
-  username: artgram
-  password: <%= ENV['ARTGRAM_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
