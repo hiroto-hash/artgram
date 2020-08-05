@@ -1,6 +1,6 @@
-.news-inner {
+.new-inner {
   margin-top: 30px;
-  .news-title {
+  .new-title {
     &__inner {
       width: 100%;
       .form-control {
@@ -10,7 +10,7 @@
       }
     }
   }
-  .news-tag {
+  .new-tag {
     margin-top: 20px;
     &__inner {
       .form-control {
@@ -20,29 +20,41 @@
       }
     }
   }
-  .news-text {
-    display: flex;
+  .new-text {
+    // display: flex;
+
     &__inner {
       &__top {
-        width: 90%;
-        background-color: honeydew;
+        // background-color: rgb(253, 158, 81);
+        .sell-main__upload-items {
+          text-align: center;
+          margin: 20px 0;
+        }
         
       }
     }
     .text-input {
-      width:50%;
+      width:99%;
       height:300px;
       border: 1px solid #ddd;
+      margin-top: 20px;
       textarea {
         resize: vertical;
       }
     }
   }
-  .news-push {
+  .new-push {
     &__inner {
+      text-align: center;
+      margin-top: 20px;
       .push-button {
+        padding: 20px 40px;
+        background-color: orangered;
+        border: 1px solid #ddd;
         .push-icon {
-          color: red($color: #000000)
+          color: white;
+          background-color: orangered;
+          font-weight: bolder;
         }
       }
     }

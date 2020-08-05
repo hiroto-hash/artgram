@@ -1,26 +1,24 @@
 .warrper
-  = render "top/header"
+  = render "top/headers"
   = form_with model: @item, local: true do |f|
-    .news-inner
-      .news-title
-        .newss-title__inner
+    .new-inner
+      .new-title
+        .new-title__inner
           %input.form-control{name: "draft_item[title]", placeholder: "タイトル", tabindex: "1", value: ""}/
-      .news-tag
-        .news-tag__inner
+      .new-tag
+        .new-tag__inner
           %input.form-control{name: "draft_item[tag]", placeholder: "タグ", tabindex: "1", value: ""}/
-      .news-text
-        .news-text__inner
-          .news-text__inner__top
+      .new-text
+        .new-text__inner
+          .new-text__inner__top
             .sell-main__upload-items
-              = f.fields_for ,id:"item_input" do |i|  
-                - if @user.image.present?
-                  = i.file_field :src, @item,id: "item_image"
-                - else 
-                  = i.file_field "sample.img",id: "img_prev"
-        .news-text__inner__bottom
+              %input#myfile{:type => "file"}/
+              %br
+              %img#img{:style => "width: 400px;height: 400px"}/
+        .new-text__inner__bottom
           = f.text_area :description, {class: "text-input", placeholder: "アート知識を共有しよう！"}
-      .news-push
-        .news-push__inner
+      .new-push
+        .new-push__inner
           %button.push-button{tabindex: "12", type: "button"}
             %span.push-icon
               投稿
